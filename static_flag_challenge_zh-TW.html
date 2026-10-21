@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>前端偵查任務｜找出隱藏的 Flag</title>
+  <style>
+    :root {
+      color-scheme: dark;
+      --bg: #0b1020;
+      --panel: #141c31;
+      --text: #edf2ff;
+      --muted: #a9b6d3;
+      --accent: #65e6c3;
+      --line: #2a3858;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0; min-height: 100vh; display: grid; place-items: center;
+      padding: 24px; font-family: system-ui, -apple-system, "Noto Sans TC", sans-serif;
+      background: radial-gradient(circle at top, #1a2c4d 0, var(--bg) 55%);
+      color: var(--text);
+    }
+    main {
+      width: min(720px, 100%); padding: clamp(24px, 5vw, 44px);
+      background: rgba(20, 28, 49, .94); border: 1px solid var(--line);
+      border-radius: 20px; box-shadow: 0 24px 80px rgba(0,0,0,.35);
+    }
+    .tag {
+      display: inline-block; color: var(--accent); border: 1px solid #326c68;
+      border-radius: 999px; padding: 6px 12px; font-size: .85rem; letter-spacing: .06em;
+    }
+    h1 { margin: 18px 0 12px; font-size: clamp(1.8rem, 5vw, 2.6rem); }
+    p { color: var(--muted); line-height: 1.8; }
+    .mission {
+      margin: 26px 0; padding: 18px 20px; border-left: 3px solid var(--accent);
+      background: #0d1528; border-radius: 0 12px 12px 0;
+    }
+    .mission strong { color: var(--text); }
+    details {
+      margin-top: 14px; border: 1px solid var(--line); border-radius: 12px;
+      padding: 14px 16px; background: #10182b;
+    }
+    summary { cursor: pointer; font-weight: 650; color: var(--accent); }
+    details p { margin-bottom: 4px; }
+    footer { margin-top: 28px; padding-top: 18px; border-top: 1px solid var(--line); font-size: .88rem; }
+    kbd { color: var(--text); background: #26324d; padding: 3px 7px; border-radius: 5px; border: 1px solid #3b4a69; }
+  </style>
+</head>
+<body>
+  <main>
+    <span class="tag">WEB CHALLENGE · LEVEL 01</span>
+    <h1>找出隱藏的 Flag</h1>
+    <p>歡迎來到前端偵查任務。這個頁面看起來很單純，但真正的線索不一定會出現在畫面上。</p>
+
+    <section class="mission">
+      <strong>🎯 任務目標</strong>
+      <p>找出藏在這個靜態網頁中的 Flag。請只使用瀏覽器內建的開發者工具，不需要登入，也不需要安裝任何東西。</p>
+    </section>
+
+    <h2>提示</h2>
+    <details>
+      <summary>提示 1：從哪裡開始？</summary>
+      <p>先打開瀏覽器的開發者工具。你可以按 <kbd>F12</kbd>，或在頁面上按右鍵並選擇「檢查」。</p>
+    </details>
+    <details>
+      <summary>提示 2：看哪裡？</summary>
+      <p>畫面上看不到，不代表原始碼裡沒有。試著查看這個頁面的 HTML，並留意看起來不像一般文字的內容。</p>
+    </details>
+    <details>
+      <summary>提示 3：線索的形式</summary>
+      <p>有些文字會使用一種常見的編碼方式表示。若內容由英文字母、數字，以及偶爾出現的 <code>=</code> 組成，可以思考它可能是什麼格式。</p>
+    </details>
+
+    <footer>
+      <p>規則：不需要暴力破解。仔細觀察原始碼，逐步找出線索即可。</p>
+    </footer>
+  </main>
+
+  <script>
+    // 任務資料：這段內容刻意不顯示在網頁畫面中。
+    // 請自行觀察原始碼並判斷其編碼形式。
+    const challengeData = "ZmxhZ3tpbnNwZWN0X3RoZV9zb3VyY2V9";
+  </script>
+</body>
+</html>
